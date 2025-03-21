@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이용 약관 동의</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 400px;
+      width: 90%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .terms-box {
+      height: 150px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f9f9f9;
+      overflow-y: auto;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">서비스 이용 약관</div>
+    
+    <div class="terms-box">
+      본 약관은 서비스 이용에 대한 기본적인 사항을 규정하는 문서입니다. 
+      <br><br>
+      1. 본 서비스는 이용자의 편의를 위해 제공됩니다.<br>
+      2. 서비스 이용 시 법률을 준수해야 합니다.<br>
+      3. 회사는 서비스 제공을 위해 이용자의 정보를 처리할 수 있습니다.<br>
+      4. 기타 중요한 사항들은 본 약관을 통해 명시됩니다.<br>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="agree" onclick="toggleButton()">
+      <label for="agree">이용 약관에 동의합니다.</label>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" disabled>확인</button>
+  </div>
+
+  <script>
+    function toggleButton() {
+      const checkbox = document.getElementById("agree");
+      const button = document.getElementById("submitBtn");
+      button.disabled = !checkbox.checked;
+    }
+  </script>
+
+</body>
+</html>
