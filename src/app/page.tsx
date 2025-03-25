@@ -7,11 +7,13 @@ import Page1_content1 from "./_asset/page1content1";
 import Page1_content2 from "./_asset/page1content2";
 import Page1_content3 from "./_asset/page1content3";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const [agree1, setAgree1] = useState(false);
   const [agree2, setAgree2] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const router = useRouter()
   
   useEffect(() => {
     if(agree1 && agree2){
@@ -22,8 +24,9 @@ export default function Home() {
   }, [agree1, agree2]);
 
   const onclick = () => {
-    // 페이지 이동
+    router.push('/page2');
   }
+  
   return (
     <>
       <Wrap title={page1_title1} content={<Page1_content1/>} useAgree={false}/>
@@ -31,7 +34,7 @@ export default function Home() {
       <Wrap title={page1_title2} content={<Page1_content2/>} useAgree={true} setAgree={setAgree1}/>
       <hr/>
       <Wrap title={page1_title3} content={<Page1_content3/>} useAgree={true} setAgree={setAgree2}/>
-      <Button text="다음" disabled={disabled} />
+      <Button text="다음" disabled={disabled} onclick={onclick}/>
     </>
   );
 }

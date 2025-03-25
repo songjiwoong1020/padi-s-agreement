@@ -4,7 +4,7 @@ export default function Page1_content2 () {
   return (
     <>
       <b>수중사진, 지상사진, 동영상 초상권 면책 동의서</b><br/>
-      본인(수강생 이름).<input id="name" className={styles['name-input']} placeholder="홍길동"/>은(는) 스킨 스쿠버 다이빙 진행 중, 촬영된 수중사진,
+      본인(수강생 이름).<input className={styles['name-input']} placeholder="홍길동"/>은(는) 스킨 스쿠버 다이빙 진행 중, 촬영된 수중사진,
       지상사진, 동영상 에 대한 초상권, 저작권이 본 프로그램을 제공하는 시설, <span className={styles['text-em']}>성산 스쿠버 리조트</span> 또는,
       <span className={styles['text-em']}>PADI Americos, Inc.,</span> 및 그 계열사 또는 자회사 각 회사의 직원 간부, 에이전트 또는 양수인 (이하
       "면책당사자"라 칭함)에게 있음을 이해하고 동의한다.<br/>
