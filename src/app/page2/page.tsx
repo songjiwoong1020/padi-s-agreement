@@ -16,7 +16,7 @@ export default function Page2() {
       <Input label="E-MAIL" type="email"/>
       <Input label="생년 월 일" type="date"/>
       <Input label="주소" type="text"/>
-      <Button text="다음" disabled={false} onclick={()=>{}}/>
+      {/* <Button text="다음" disabled={false} onclick={()=>{}}/> */}
     </div>
   );
 }

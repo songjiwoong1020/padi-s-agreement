@@ -7,13 +7,13 @@ import Page1_content1 from "./_asset/page1content1";
 import Page1_content2 from "./_asset/page1content2";
 import Page1_content3 from "./_asset/page1content3";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [agree1, setAgree1] = useState(false);
   const [agree2, setAgree2] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const router = useRouter()
+  const router = useRouter();
   
   useEffect(() => {
     if(agree1 && agree2){
