@@ -6,7 +6,7 @@ import { page1_title1, page1_title2, page1_title3 } from "./_asset/titles.json";
 import Page1_content1 from "./_asset/page1content1";
 import Page1_content2 from "./_asset/page1content2";
 import Page1_content3 from "./_asset/page1content3";
-import { useEffect, useState } from "react";
+import { FormEventHandler, useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
@@ -23,18 +23,21 @@ export default function Home() {
     }
   }, [agree1, agree2]);
 
-  const onclick = () => {
+  const onSubmit: FormEventHandler<HTMLFormElement> = e => {
+    e.preventDefault();
     router.push('/page2');
   }
   
   return (
     <>
-      <Wrap title={page1_title1} content={<Page1_content1/>} useAgree={false}/>
-      <hr/>
-      <Wrap title={page1_title2} content={<Page1_content2/>} useAgree={true} setAgree={setAgree1}/>
-      <hr/>
-      <Wrap title={page1_title3} content={<Page1_content3/>} useAgree={true} setAgree={setAgree2}/>
-      <Button text="다음" disabled={disabled} onclick={onclick}/>
+      <form onSubmit={onSubmit}>
+        <Wrap title={page1_title1} content={<Page1_content1/>} useAgree={false}/>
+        <hr/>
+        <Wrap title={page1_title2} content={<Page1_content2/>} useAgree={true} setAgree={setAgree1}/>
+        <hr/>
+        <Wrap title={page1_title3} content={<Page1_content3/>} useAgree={true} setAgree={setAgree2}/>
+        <Button text="다음" disabled={disabled} />
+      </form>
     </>
   );
 }
