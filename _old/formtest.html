@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form onsubmit="onSubmit(event)">
+    <input type="submit"/>
+  </form>
+  <script>
+    function onSubmit (e) {
+      
+      console.log('dispatch onSubmit');
+      console.log('==============');
+      console.log(e);
+      e.preventDefault();
+    }
+  </script>
+</body>
+</html>
