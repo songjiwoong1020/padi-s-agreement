@@ -1,6 +1,6 @@
 'use client';
 
-import Wrap from "./wrap";
+import Wrap from "./_wrap";
 import Button from "./button";
 import { page1_title1, page1_title2, page1_title3 } from "../_asset/titles.json";
 import Page1_content1 from "../_asset/page1content1";
@@ -8,7 +8,6 @@ import Page1_content2 from "../_asset/page1content2";
 import Page1_content3 from "../_asset/page1content3";
 import { FormEventHandler, useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
-import Notes from "./Testservercomponent";
 
 export default function Group() {
 
@@ -31,7 +30,6 @@ export default function Group() {
   }
   return (
     <form onSubmit={onSubmit}>
-      <Notes/>
       <Wrap title={page1_title1} content={<Page1_content1/>} useAgree={false}/>
       <hr/>
       <Wrap title={page1_title2} content={<Page1_content2/>} useAgree={true} setAgree={setAgree1}/>

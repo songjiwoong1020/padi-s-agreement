@@ -7,7 +7,7 @@ type props = {
   setAgree?: Function;
 };
 
-export default function Wrap ({title, content, useAgree, setAgree}: props) {
+export default function _Wrap ({title, content, useAgree, setAgree}: props) {
   const onClick = e => { // ============ 이벤트 타입 알아보기!!!!!!
     if(setAgree)
     setAgree(e.target.checked);

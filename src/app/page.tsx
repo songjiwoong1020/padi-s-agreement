@@ -1,9 +1,5 @@
-import Group from "./_component/Group";
+import { redirect } from "next/navigation";
 
 export default function Home() {  
-  return (
-    <>
-      <Group/>
-    </>
-  );
+  redirect('/1');
 }
