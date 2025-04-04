@@ -1,0 +1,17 @@
+.text-em {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.name-input {
+  /* border: solid transparent 1px; */
+  border: none;
+  border-bottom: solid black 1px;
+  width: 3rem;
+  text-align: right;
+  /* background: none; */
+}
+
+.name-nodata {
+  border: dashed red 1px;
+}

@@ -2,25 +2,36 @@
 'use client';
 
 import Wrap from "@/app/_common/Wrap";
+import Button from "@/app/_common/Button";
 import Content1 from "./Content1";
 import Content2 from "./Content2";
-import Content3 from "./Content2";
+import Content3 from "./Content3";
+import { useRef } from "react";
+
+const titles = {
+  "title1": "PADI Discover Scuba® Diving 수강생 선언문",
+  "title2": "초상권 면책 동의서",
+  "title3": "개인정보 제공 및 이용 동의서"
+}
 
 export default function Group() {
+  const checkRef1 = useRef<HTMLInputElement>(null);
+  const checkRef2 = useRef<HTMLInputElement>(null);
+
   return (
     <>
-      <Wrap checkbox={false}>
+      <Wrap title={titles.title1} >
         <Content1 />
       </Wrap>
       <hr/>
-      <Wrap checkbox={true}>
+      <Wrap title={titles.title2} checkRef={checkRef1}>
         <Content2 />
       </Wrap>
       <hr/>
-      <Wrap checkbox={true}>
+      <Wrap title={titles.title3} checkRef={checkRef2}>
         <Content3 />
       </Wrap>
-      <button className="submit-btn" id="submitBtn" disabled >다음</button>
+      <Button text={'다음'} disabled={true}/>
     </>
   )
 }

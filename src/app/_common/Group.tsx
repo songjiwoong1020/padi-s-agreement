@@ -1,7 +1,7 @@
 'use client';
 
 import Wrap from "./_wrap";
-import Button from "./button";
+import Button from "./Button";
 import { page1_title1, page1_title2, page1_title3 } from "../_asset/titles.json";
 import Page1_content1 from "../_asset/page1content1";
 import Page1_content2 from "../_asset/page1content2";
