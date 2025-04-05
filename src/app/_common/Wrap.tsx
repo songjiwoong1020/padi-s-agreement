@@ -1,6 +1,6 @@
 import styles from "./wrap.module.css";
 
-export default function Wrap ({ children, title = '', checkRef = null }: { children: React.ReactNode, title?: string, checkRef?: HTMLInputElement | null }) {
+export default function Wrap ({ children, title = '', checkRef = null }: { children: React.ReactNode, title?: string, checkRef?: React.Ref<HTMLInputElement> | null }) {
   return (
     <>
       <div className={styles.wrap}>

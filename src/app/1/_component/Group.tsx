@@ -17,6 +17,11 @@ const titles = {
 export default function Group() {
   const checkRef1 = useRef<HTMLInputElement>(null);
   const checkRef2 = useRef<HTMLInputElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const isDisabled = () => {
+    return !(checkRef1.current?.checked && checkRef2.current?.checked);
+  };
 
   return (
     <>
@@ -31,7 +36,7 @@ export default function Group() {
       <Wrap title={titles.title3} checkRef={checkRef2}>
         <Content3 />
       </Wrap>
-      <Button text={'다음'} disabled={true}/>
+      <Button text={'다음'} buttonRef={buttonRef}/>
     </>
   )
 }
