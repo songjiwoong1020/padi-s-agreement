@@ -29,24 +29,20 @@ export default function Group() {
 
   return (
     <>
-    <div onChange={onChange}>
-      <Wrap title={titles.title1} >
-        <Content1 />
-      </Wrap>
-      <hr/>
-      <Wrap title={titles.title2} checkRef={checkRef1}>
-        <Content2 />
-      </Wrap>
-      <hr/>
-      <Wrap title={titles.title3} checkRef={checkRef2}>
-        <Content3 />
-      </Wrap>
-<<<<<<< HEAD
-      <Button text={'다음'} disabled={true}/>
+      <div onChange={onChange}>
+        <Wrap title={titles.title1} >
+          <Content1 />
+        </Wrap>
+        <hr/>
+        <Wrap title={titles.title2} checkRef={checkRef1}>
+          <Content2 />
+        </Wrap>
+        <hr/>
+        <Wrap title={titles.title3} checkRef={checkRef2}>
+          <Content3 />
+        </Wrap>
+        <Button text={'다음'} buttonRef={buttonRef}/>
       </div>
-=======
-      <Button text={'다음'} buttonRef={buttonRef}/>
->>>>>>> 54b137b1d2e0c686e43dc2d2905efc1f46a45eac
     </>
   )
 }
