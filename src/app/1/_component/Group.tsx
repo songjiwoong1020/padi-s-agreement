@@ -18,8 +18,13 @@ export default function Group() {
   const checkRef1 = useRef<HTMLInputElement>(null);
   const checkRef2 = useRef<HTMLInputElement>(null);
 
+  const onChange = e => {
+    console.log(e.target.checked)
+  }
+
   return (
     <>
+    <div onChange={onChange}>
       <Wrap title={titles.title1} >
         <Content1 />
       </Wrap>
@@ -32,6 +37,7 @@ export default function Group() {
         <Content3 />
       </Wrap>
       <Button text={'다음'} disabled={true}/>
+      </div>
     </>
   )
 }
