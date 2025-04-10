@@ -14,26 +14,57 @@ const titles = {
   "title3": "개인정보 제공 및 이용 동의서"
 }
 
+//type1 event bubbling 
+// export default function Group() {
+//   const checkRef1 = useRef<HTMLInputElement>(null);
+//   const checkRef2 = useRef<HTMLInputElement>(null);
+//   const buttonRef = useRef<HTMLButtonElement>(null);
+
+//   const handleChange = () => {
+//     (checkRef1?.current?.checked && checkRef2?.current?.checked) 
+//     ? buttonRef.current?.removeAttribute('disabled')
+//     : buttonRef.current?.setAttribute('disabled', 'true');
+//   }
+//   return (
+//     <div onChange={handleChange}>
+//       <Wrap title={titles.title1} >
+//         <Content1 />
+//       </Wrap>
+//       <hr/>
+//       <Wrap title={titles.title2} checkRef={checkRef1}>
+//         <Content2 />
+//       </Wrap>
+//       <hr/>
+//       <Wrap title={titles.title3} checkRef={checkRef2}>
+//         <Content3 />
+//       </Wrap>
+//       <Button text={'다음'} buttonRef={buttonRef}/>
+//     </div>
+//   )
+// }
+
+//type2 handler prop 
 export default function Group() {
   const checkRef1 = useRef<HTMLInputElement>(null);
   const checkRef2 = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  const isDisabled = () => {
-    return !(checkRef1.current?.checked && checkRef2.current?.checked);
-  };
-
+  const handleChange = () => {
+    (checkRef1?.current?.checked && checkRef2?.current?.checked) 
+    ? buttonRef.current?.removeAttribute('disabled')
+    : buttonRef.current?.setAttribute('disabled', 'true');
+  }
   return (
     <>
       <Wrap title={titles.title1} >
         <Content1 />
       </Wrap>
       <hr/>
-      <Wrap title={titles.title2} checkRef={checkRef1}>
+      <Wrap title={titles.title2} checkRef={checkRef1} handleChange={handleChange}>
         <Content2 />
       </Wrap>
       <hr/>
-      <Wrap title={titles.title3} checkRef={checkRef2}>
+      <Wrap title={titles.title3} checkRef={checkRef2} handleChange={handleChange}>
         <Content3 />
       </Wrap>
       <Button text={'다음'} buttonRef={buttonRef}/>
