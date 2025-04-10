@@ -49,7 +49,6 @@ export default function Group() {
   const checkRef2 = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-<<<<<<< HEAD
   const handleChange = () => {
     (checkRef1?.current?.checked && checkRef2?.current?.checked) 
     ? buttonRef.current?.removeAttribute('disabled')
@@ -69,32 +68,6 @@ export default function Group() {
         <Content3 />
       </Wrap>
       <Button text={'다음'} buttonRef={buttonRef}/>
-=======
-  const isDisabled = () => {
-    return !(checkRef1.current?.checked && checkRef2.current?.checked);
-  };
-
-  const onChange = e => {
-    console.log(e.target.checked)
-  }
-
-  return (
-    <>
-      <div onChange={onChange}>
-        <Wrap title={titles.title1} >
-          <Content1 />
-        </Wrap>
-        <hr/>
-        <Wrap title={titles.title2} checkRef={checkRef1}>
-          <Content2 />
-        </Wrap>
-        <hr/>
-        <Wrap title={titles.title3} checkRef={checkRef2}>
-          <Content3 />
-        </Wrap>
-        <Button text={'다음'} buttonRef={buttonRef}/>
-      </div>
->>>>>>> refs/remotes/origin/main
     </>
   )
 }
