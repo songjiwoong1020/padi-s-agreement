@@ -1,7 +1,7 @@
 import { page2_title1, page2_title2 } from "../_asset/titles.json";
 import Wrap from "../_common/_wrap";
 import Button from "../_common/Button";
-import Input from "../_common/input";
+import Input from "../_common/Input";
 import Page2_content1 from "../_asset/page2content1";
 import Page2_content2 from "../_asset/page2content2";
 

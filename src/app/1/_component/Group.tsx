@@ -25,6 +25,7 @@ const titles = {
 //     ? buttonRef.current?.removeAttribute('disabled')
 //     : buttonRef.current?.setAttribute('disabled', 'true');
 //   }
+//
 //   return (
 //     <div onChange={handleChange}>
 //       <Wrap title={titles.title1} >
@@ -54,6 +55,7 @@ export default function Group() {
     ? buttonRef.current?.removeAttribute('disabled')
     : buttonRef.current?.setAttribute('disabled', 'true');
   }
+
   return (
     <>
       <Wrap title={titles.title1} >
