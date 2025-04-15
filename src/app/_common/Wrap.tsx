@@ -1,7 +1,13 @@
-import { ChangeEvent } from "react";
 import styles from "./wrap.module.css";
 
-export default function Wrap ({ children, title = '', checkRef = null, handleChange }: { children: React.ReactNode, title?: string, checkRef?: React.Ref<HTMLInputElement> | null }) {
+type props = {
+  children: React.ReactNode,
+  title?: string,
+  checkRef?: React.Ref<HTMLInputElement> | null,
+  handleChange?: React.ChangeEventHandler<HTMLInputElement>
+}
+
+export default function Wrap ({ children, title = '', checkRef = null, handleChange }: props) {
   return (
     <>
       <div className={styles.wrap}>
