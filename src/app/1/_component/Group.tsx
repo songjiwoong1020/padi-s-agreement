@@ -62,11 +62,21 @@ export default function Group() {
         <Content1 />
       </Wrap>
       <hr/>
-      <Wrap title={titles.title2} checkRef={checkRef1} handleChange={handleChange}>
+      <Wrap
+        title={titles.title2}
+        showCheckbox
+        checkRef={checkRef1}
+        handleChange={handleChange}
+      >
         <Content2 />
       </Wrap>
       <hr/>
-      <Wrap title={titles.title3} checkRef={checkRef2} handleChange={handleChange}>
+      <Wrap
+        title={titles.title3}
+        showCheckbox
+        checkRef={checkRef2}
+        handleChange={handleChange}
+      >
         <Content3 />
       </Wrap>
       <Button text={'다음'} buttonRef={buttonRef}/>
