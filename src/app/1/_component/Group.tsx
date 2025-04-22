@@ -7,6 +7,7 @@ import Content1 from "./Content1";
 import Content2 from "./Content2";
 import Content3 from "./Content3";
 import { useRef } from "react";
+import { useRouter } from 'next/navigation';
 
 const titles = {
   "title1": "PADI Discover Scuba® Diving 수강생 선언문",
@@ -49,11 +50,16 @@ export default function Group() {
   const checkRef1 = useRef<HTMLInputElement>(null);
   const checkRef2 = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const router = useRouter();
 
   const handleChange = () => {
     (checkRef1?.current?.checked && checkRef2?.current?.checked) 
     ? buttonRef.current?.removeAttribute('disabled')
     : buttonRef.current?.setAttribute('disabled', 'true');
+  }
+
+  const handleClick = () => {
+    router.push('/page2');
   }
 
   return (
@@ -79,7 +85,7 @@ export default function Group() {
       >
         <Content3 />
       </Wrap>
-      <Button text={'다음'} buttonRef={buttonRef}/>
+      <Button text={'다음'} buttonRef={buttonRef} handleClick={handleClick}/>
     </>
   )
 }
