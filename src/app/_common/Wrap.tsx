@@ -8,7 +8,12 @@ type props = {
   handleChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export default function Wrap ({ children, title = '', showCheckbox = false, checkRef, handleChange }: props) {
+export default function Wrap ({
+  children,
+  title = '',
+  showCheckbox = false,
+  checkRef,
+  handleChange }: props) {
   return (
     <>
       <div className={styles.wrap}>

@@ -1,6 +1,14 @@
 import styles from "./input.module.css";
 
-export default function Input({ label, type }: {label: string, type: string }) {
+type props = {
+  label: string,
+  type: string
+}
+
+export default function Input({
+  label,
+  type
+}: props) {
   return (
     <>
       <label>*{label}</label>
