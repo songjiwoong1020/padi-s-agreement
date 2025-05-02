@@ -1,4 +1,4 @@
-import styles from './asset.module.css';
+import styles from '@/app/_common/common.module.css';
 
 export default function Page1_content3 () {
   return (

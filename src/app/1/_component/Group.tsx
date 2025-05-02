@@ -59,7 +59,7 @@ export default function Group() {
   }
 
   const handleClick = () => {
-    router.push('/page2');
+    router.push('/2');
   }
 
   return (
