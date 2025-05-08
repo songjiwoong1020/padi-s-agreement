@@ -19,6 +19,7 @@ export default function Group() {
   const checkRef1 = useRef<HTMLInputElement>(null);
   const checkRef2 = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   const handleChange = () => {
@@ -43,7 +44,7 @@ export default function Group() {
         checkRef={checkRef1}
         handleChange={handleChange}
       >
-        <Content2 />
+        <Content2 inputRef={inputRef}/>
       </Wrap>
       <hr/>
       <Wrap
