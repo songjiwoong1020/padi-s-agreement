@@ -1,4 +1,6 @@
 //page를 나타내기 위한 해당 page 최상위 컴포넌트
+
+
 'use client';
 
 import Wrap from "@/app/_common/Wrap";
